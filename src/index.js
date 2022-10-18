@@ -13,7 +13,7 @@ inputTextRef.addEventListener('input', debounce(searchCountyData, DEBOUNCE_DELAY
 function searchCountyData(event) {
     countryInfoRef.innerHTML = '';
     countryListRef.innerHTML = '';
-    const searchCounty = event.target.value;
+    const searchCounty = event.target.value.trim().toLowerCase();
     if (searchCounty === '') {
         return
     }
